@@ -56,9 +56,23 @@ func Grayscale(img image.Image) image.Image {
 	return grayImg
 }
 
+// Resize resizes the image to a maximum width or height of 500 pixels
+// while maintaining the aspect ratio.
 func Resize(img image.Image) image.Image {
-	newWidth := uint(500)
-	newHeight := uint(500)
-	resizedImg := resize.Resize(newWidth, newHeight, img, resize.Lanczos3)
-	return resizedImg
+	originalBounds := img.Bounds()
+	width := originalBounds.Dx()
+	height := originalBounds.Dy()
+
+	var newWidth, newHeight uint
+
+	if width >= height {
+		newWidth = 500
+		newHeight = uint((float64(height) / float64(width)) * 500)
+	} else {
+		newHeight = 500
+		newWidth = uint((float64(width) / float64(height)) * 500)
+	}
+
+	resized := resize.Resize(newWidth, newHeight, img, resize.Lanczos3)
+	return resized
 }
