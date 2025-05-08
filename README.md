@@ -71,7 +71,7 @@ To ensure a smooth run:
 
 ## How to Test & What Has Been Tested
 
-### Unit Tests
+### Unit Tests (imageprocessing_test.go)
 ```bash
 go test ./image_processing
 ```
@@ -79,7 +79,7 @@ Tests implemented:
 - **Resize**: Checks output dimensions and aspect ratio.
 - **Grayscale**: Verifies that pixel color is changed to grayscale.
 
-### Benchmark Tests
+### Benchmark Tests (main_test.go)
 ```bash
 go test -bench=. -benchmem
 ```
