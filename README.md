@@ -2,19 +2,20 @@
 
 ## Overview
 
-This project implements an image processing pipeline in Go to demonstrate the performance advantage of concurrency. The pipeline reads input images, resizes them while preserving their aspect ratios, converts them to grayscale, and saves the results. It supports both concurrent and sequential modes of execution, includes unit and benchmark testing, helping determine whether the startup will utilize Go cocurrency.
+This project implements an image processing pipeline in Go to demonstrate the performance advantage of concurrency. The pipeline reads input images, resizes them while preserving their aspect ratios, converts them to grayscale, and saves the results. It supports both concurrent and sequential modes of execution, includes unit and benchmark testing, helping determine whether the startup will utilize Go concurrency.
 
 
 ## Image Input and Output
 
 - **Input Location**: `images/`  
   Images to be processed should be placed in this directory (e.g., `images/image1.jpeg`, `images/image2.jpeg`).
-  <img src="images/image5.jpeg" alt="image5" width="400"/>
+
+<img src="images/image5.jpeg" alt="image5" width="400"/>
 
 
 - **Output Location**: `images/output/`  
   All processed images (resized and grayscaled) will be saved here with the same filenames as the originals.
-  <img src="images/output/image5.jpeg" alt="image5output" width="400"/>
+<img src="images/output/image5.jpeg" alt="image5output" width="400"/>
 
 
 ## How to Build and Run (Application)
@@ -133,4 +134,4 @@ This replication confirms that concurrent design patterns in Go are not only the
 
 ## GenAI Tools
 
-Generative AI tools were used throughout this project to assist with coding, testing, and performance analysis. For coding assistance, GPT-4 was used to help write modular Go functions for concurrent pipeline, resizing. GPT assisted in designing and debugging unit tests. It also used to analyze the performance, helping interpret benchmark results, calculate speedup ratios. And changed the readme document to markdown file.
+Generative AI tools were used throughout this project to assist with coding, testing, and performance analysis. For coding assistance, GPT-4 was used to help write modular Go functions for the concurrent pipeline, resizing. GPT assisted in designing and debugging unit tests. It is also used to analyze the performance, helping interpret benchmark results, calculate speedup ratios. And changed the readme document to a markdown file.
